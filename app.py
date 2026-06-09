@@ -277,9 +277,9 @@ elif module == "📈 Beam Deflection Visualizer":
     col1, col2 = st.columns([1, 2])
 
     with col1:
-        load = st.number_input("Load (kN)", 1, 1000, 100)
-        beam_length = st.number_input("Beam Length (m)", 1, 50, 10)
-        I = st.number_input("Moment of Inertia (m⁴)", 0.0001, 10.0, 0.005, format="%.4f")
+        load = st.number_input("Load (kN)", 1, 1000000, 100)
+        beam_length = st.number_input("Beam Length (m)", 1, 5000, 10)
+        I = st.number_input("Moment of Inertia (m⁴)", 0.0001, 1000.0, 0.005, format="%.4f")
         material = st.selectbox("Material", list(MATERIALS.keys()), key="beam_material")
         support = st.selectbox("Support Condition", ["Simply Supported", "Cantilever"])
 
